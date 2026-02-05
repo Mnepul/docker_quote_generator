@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, render_template
 import requests
+import os
 
 API_BASE_URL = "http://quote-api:8000"
+WEBAPP_PORT = os.getenv("WEBAPP_PORT", "5000")
 
 app = Flask(__name__)
 
@@ -35,4 +37,4 @@ def get_quotes_count():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=int(WEBAPP_PORT))
