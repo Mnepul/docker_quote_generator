@@ -6,26 +6,25 @@ Contient le fichier docker-compose.yaml pour éxecuter les 2 container dans un b
 
 ## Architecture
 * **API** : Python 3.14 (Alpine), port 8000
-    / : donne une quote aléatoirement
-    /howmany : donne le nombre de quotes
+** / : donne une quote aléatoirement
+** /howmany : donne le nombre de quotes
 * **WebAPP** : Python 3.14 (Alpine), port 5000
 
 ## Installation avec Docker
 
-### 1. Constuire l'image API
 ```bash
+### 1. Constuire l'image API
 cd api
 docker build . -t quote_api
 
 ### 2. Construire l'image WebAPP
-```bash
 cd webapp
 docker build . -t quote_webapp
 
-### 3. Lancer les containeur 
-```bash
+### 3. Lancer les containers 
 docker compose up -d
+````
 
-### 4. Accès aux services
+## Accès aux services
 * ***API*** : http://<dockerhost>:8000
 * ***WebApp*** : http://<dockerhost>:5000
