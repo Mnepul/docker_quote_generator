@@ -9,9 +9,9 @@ Contient le fichier docker-compose.yaml pour éxecuter les 2 container dans un b
 ## Architecture
 * **API** : Python 3.14 (Alpine), port 8000. 
 
-** / : donne une quote aléatoirement. 
+ / : donne une quote aléatoirement. 
 
-** /howmany : donne le nombre de quotes. 
+ /howmany : donne le nombre de quotes. 
 
 * **WebAPP** : Python 3.14 (Alpine), port 5000. 
 
