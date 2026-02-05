@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generato</title>
+    <style>
+      body {
+        /* Fond gris et centrage complet */
+        background-color: lightgray;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:
+          'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        max-width: 600px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .quote {
+        /* Citations en plein milieu et en italique */
+        font-size: 2rem;
+        font-style: italic;
+        color: #333;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="quote">
+        Il y a actuellement {{ count_quote }} citations repertoriées
+      </span>
+    </div>
+  </body>
+</html>
