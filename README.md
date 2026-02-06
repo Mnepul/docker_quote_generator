@@ -33,3 +33,6 @@ docker compose up -d
 ## Accès aux services
 * **API** : http://dockerhost:8000
 * **WebApp** : http://dockerhost:5000
+
+## Nom des hosts 
+La WebApp tente de joindre l'API sur le host quote-api:8000. 

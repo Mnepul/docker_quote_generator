@@ -1,0 +1,24 @@
+services:
+  quote-api:
+    build: ./api
+    image: quote/quote-api
+    networks: 
+      - quote-ntw
+  
+  quote-webapp:
+    build: ./webapp
+    image: quote/quote_webapp
+    ports:
+      - 5000:5000
+    environment:
+      - API_BASE_URL="http://quote-api:8000"
+      - WEBAPP_PORT=5000
+    networks:
+      - quote-ntw
+    depends_on:
+      - quote-api
+
+
+networks:
+  quote-ntw:
+    driver: bridge
