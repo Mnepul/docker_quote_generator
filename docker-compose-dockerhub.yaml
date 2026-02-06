@@ -1,13 +1,11 @@
 services:
   quote-api:
-    build: ./api
-    image: quote/quote_api
-    networks: 
+    image: mnepul/quote_api:v1
+    networks:
       - quote-ntw
-  
+
   quote-webapp:
-    build: ./webapp
-    image: quote/quote_webapp
+    image: mnepul/quote_webapp:v1
     ports:
       - 5000:5000
     environment:
@@ -17,8 +15,7 @@ services:
       - quote-ntw
     depends_on:
       - quote-api
-
-
+  
 networks:
   quote-ntw:
-    driver: bridge
+      driver: bridge
