@@ -1,7 +1,7 @@
 services:
   quote-api:
     build: ./api
-    image: quote/quote-api
+    image: quote/quote_api
     networks: 
       - quote-ntw
   
