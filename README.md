@@ -20,11 +20,11 @@ Contient le fichier docker-compose.yaml pour éxecuter les 2 container dans un b
 ```bash
 ### 1. Constuire l'image API
 cd api
-docker build . -t quote_api
+docker build . -t quote/quote_api
 
 ### 2. Construire l'image WebAPP
 cd webapp
-docker build . -t quote_webapp
+docker build . -t quote/quote_webapp
 
 ### 3. Lancer les containers 
 docker compose up -d
@@ -35,4 +35,4 @@ docker compose up -d
 * **WebApp** : http://dockerhost:5000
 
 ## Nom des hosts 
-La WebApp tente de joindre l'API sur le host quote-api:8000. 
+La WebApp tente de joindre l'API sur le host **quote-api:8000**. 
